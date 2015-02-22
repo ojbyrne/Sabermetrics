@@ -8,19 +8,19 @@
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
   </script>
   
   
@@ -47,10 +47,10 @@
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Bill James disliked conventional baseball statistics</li>
-<li>Because they didn&#39;t predict anything</li>
-<li>Invented his own stats.</li>
-<li>Concept made famous by &quot;Moneyball&quot;</li>
+<li>Bill James disliked conventional baseball statistics because they weren&#39;t actually useful</li>
+<li>Invented his own stats - called &quot;sabermetrics&quot;.</li>
+<li>Concept made famous by &quot;Moneyball.&quot;</li>
+<li>&quot;Runs Created&quot; was the first &quot;sabermetric&quot;</li>
 </ol>
 
   </article>
@@ -63,9 +63,9 @@
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Specifically the concept of &quot;Runs Created&quot; was the first &quot;sabermetric&quot;</li>
-<li>Not RBIs or R but an estimate of actual contribution</li>
-<li>Three possible estimators shown here</li>
+<li>Compares individual players to estimate their value to their team.</li>
+<li>Simple Example - Miguel Tejada was the American League Most Valuable Player in 2002 (determined by voting)</li>
+<li>Use Advanced Runs Created (using all readily available statistics) to rank AL hitters</li>
 </ol>
 
   </article>
@@ -74,15 +74,26 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Versions of Runs Created</h2>
+    <h2>American League Hitters (2002) ranked by Advanced Runs Created</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Runs Created (initial version)</li>
-<li>Runs Created (accounting for stolen bases)</li>
-<li>Advanced Runs Created (using all readily available statistics)</li>
-<li>Runs Created (2002 Version)</li>
-</ol>
+    <pre><code>##       playerID teamID RunsCreatedAdvanced
+## 1136 thomeji01    CLE            154.9049
+## 901  rodrial01    TEX            153.3114
+## 1252 giambja01    NYA            150.2978
+## 897  palmera01    TEX            128.1129
+## 1287 ramirma02    BOS            127.3876
+## 1167 ordonma01    CHA            127.1339
+## 1251 soriaal01    NYA            126.2672
+## 1255 willibe02    NYA            124.9896
+## 1192 delgaca01    TOR            120.7075
+## 1059 beltrca01    KCA            115.2039
+## 1284 garcino01    BOS            115.0974
+## 965  tejadmi01    OAK            113.7712
+## 927  olerujo01    SEA            113.1961
+## 1063 sweenmi01    KCA            111.5551
+## 994  anderga01    ANA            110.6558
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -90,38 +101,23 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Results</h2>
+    <h2>Conclusion</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Results:</li>
+<li>According to &quot;AdvancedRunsCreated&quot;, Miguel Tejada (tejadmi01 OAK) was only the 12th best hitter in the American League in 2002. Jim Thome (thomeji01    CLE), Alex Rodriguez (rodrial01    TEX) or Jason Giambi (giambja01    NYA) would have been better choices for American League MVP.</li>
+</ol>
+
+<h3>Shiny Application</h3>
+
+<ol>
 <li>By aggregating the players on the team, essentially bypass the main purpose of Sabermetrics</li>
 <li>Nearly all statistics when aggregated provide predictive value of team results</li>
 <li>One exception is &quot;triples&quot; - most likely because they&#39;re pretty rare.</li>
+<li>But still a useful validation of Sabermetrics</li>
+<li><a href="http://en.wikipedia.org/wiki/Sabermetrics">Further Reading</a></li>
 </ol>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Further Reading</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li><a href="http://en.wikipedia.org/wiki/Sabermetrics">Link to Sabermetrics</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Runs_created">Link to &quot;Runs Created&quot;</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Moneyball">Link to &quot;Moneyball&quot;</a></li>
-</ol>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  <article data-timings="">
-    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -144,26 +140,14 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Versions of Runs Created'>
+        data-slide=3 title='American League Hitters (2002) ranked by Advanced Runs Created'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Results'>
+        data-slide=4 title='Conclusion'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Further Reading'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title=''>
-         6
       </a>
     </li>
   </ul>
@@ -177,7 +161,7 @@
   <!-- Load Javascripts for Widgets -->
   
   <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <!-- DONE LOADING HIGHLIGHTER JS FILES -->
    
